@@ -7,15 +7,14 @@ function sequenceFibonacci(userNumber) {
         fibonacci[0] = 1;
         fibonacci[1] = 1;
     var n = 2;
-    while (n <= userNumber) {
+    while (n < userNumber) {
         fibonacci[n] = fibonacci[n-1] + fibonacci[n-2];
-        fibonacci.push(fibonacci[n]);
+        fibonacci.push(fibonacci);
         n++;
     }
-    return fibonacci[n];
+    return fibonacci;
 }
-
 
 var num = Number(prompt('Input your number: '));
 var result = sequenceFibonacci(num);
-prn(result());
+prn(result);
